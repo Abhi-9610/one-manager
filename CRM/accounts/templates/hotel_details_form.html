@@ -1,0 +1,16 @@
+<!-- templates/hotel_details_form.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Enter Hotel Details</title>
+</head>
+<body>
+    <h2>Enter Hotel Details</h2>
+    <form method="post" action="{% url 'enter_hotel_details' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
